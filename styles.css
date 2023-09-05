@@ -154,6 +154,10 @@ table {
     flex-direction: column;
 }
 
+#big_text {
+    font-size: 1.3rem;
+}
+
 .nav {
     padding: 2rem;
 }
@@ -272,6 +276,15 @@ img {
     background-color: aliceblue;
 }
 
+.section__wrapper.quote__wrapper {
+    display: flex;
+    height: 25vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem 0 3rem;
+}
+
 .section__three > div > p + p {
     align-self: flex-end;
 }
@@ -304,7 +317,7 @@ img {
     #logo {
         font-size: 2rem;
     }
-    
+
     .section__two {
         padding: 5rem;
     }
@@ -321,6 +334,11 @@ img {
     #register_btn {
         width: 60%;
     }
+
+    .section__three .section__wrapper {
+        padding-left: 3;
+        padding-right: 3rem;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -328,6 +346,15 @@ img {
     .hero__right {
         height: 30vh;
     }
+
+    .section__three .section__wrapper {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    #big_text {
+        font-size: 2rem;
+    }   
 
 
 }
