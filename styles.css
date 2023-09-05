@@ -141,12 +141,21 @@ table {
 .section__one {
     padding: 2.5rem;
     background-image: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .section__wrapper {
     gap: 2rem;
     display: flex;
     flex-direction: column;
+}
+
+.nav {
+    padding: 2rem;
 }
 
 .nav > ul {
@@ -159,13 +168,27 @@ table {
 
 #logo {
     flex: 2;
+    font-size: 1.2rem;
+}
+
+#home {
+    margin-right: .5rem;
+}
+
+#profile {
+    margin-right: .5rem;
 }
 
 .hero {
     gap: 2rem;
     display: flex;
+    align-items: center;
     font-size: calc(.5em + .7vw);
 }
+
+/* .hero__right {
+    height: 35vh;
+} */
 
 .hero > * {
     flex: 1;
@@ -181,13 +204,18 @@ table {
     flex-direction: column;
 }
 
+.hero__left > p {
+    color: #8a8484e7;
+}
+
 .hero__right {
     background-image: url("./assets/joseph-frank-DymrYZBV5VQ-unsplash.jpg");
-    padding: 2rem;
+    padding: 4rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
+    height: 20vh;
 
 }
 
@@ -196,6 +224,7 @@ table {
     min-width: 70%;
     border-radius: 8px;
     border: none;
+    font-size: 90%;
     /* max-width: 5rem; */
     padding: .8rem 1.8rem .8rem 1.8rem;
 }
@@ -272,6 +301,10 @@ img {
 
 @media screen and (min-width: 700px) {
 
+    #logo {
+        font-size: 2rem;
+    }
+    
     .section__two {
         padding: 5rem;
     }
@@ -284,5 +317,18 @@ img {
     .card {
         flex-direction: column;
     }
+
+    #register_btn {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .hero__right {
+        height: 30vh;
+    }
+
+
 }
 
