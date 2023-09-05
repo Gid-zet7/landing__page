@@ -200,7 +200,34 @@ table {
     padding: .8rem 1.8rem .8rem 1.8rem;
 }
 
+/* ------------SECTION TWO--------- */
+
 .section__two {
     padding: 3rem;
+}
+
+.wrapper__two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.excerpts {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    min-width: 100px;
+}
+
+img {
+    width: 100%;
+}
+
+.small {
+    font-size: .5rem;
 }
 
