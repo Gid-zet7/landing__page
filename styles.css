@@ -231,3 +231,12 @@ img {
     font-size: .5rem;
 }
 
+.section__three {
+    padding: 3rem;
+    background-color: aliceblue;
+}
+
+.section__three > div > p + p {
+    align-self: flex-end;
+}
+
