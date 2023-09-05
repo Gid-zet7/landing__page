@@ -225,11 +225,13 @@ table {
 
 .card {
     max-width: 250px;
-    border-radius: 8px;
+    
 }
 
 img {
     width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .small {
@@ -266,5 +268,21 @@ img {
 
 .action__header {
     font-size: 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+
+    .section__two {
+        padding: 5rem;
+    }
+    .excerpts {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+
+    .card {
+        flex-direction: column;
+    }
 }
 
