@@ -3,6 +3,11 @@
    License: none (public domain)
 */
 
+:root {
+    --gradient: linear-gradient(to right, #ddd6f3, #faaca8);
+    font-size: 16px;
+}
+
 html,
 body,
 div,
@@ -132,3 +137,70 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.section__one {
+    padding: 2.5rem;
+    background-image: var(--gradient);
+}
+
+.section__wrapper {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav > ul {
+    display: flex;
+}
+
+.nav > ul > li {
+    flex: 1;
+}
+
+#logo {
+    flex: 2;
+}
+
+.hero {
+    gap: 2rem;
+    display: flex;
+    font-size: calc(.3em + .7vw);
+}
+
+.hero > * {
+    flex: 1;
+}
+
+.hero__header {
+    font-size: 1.8rem;
+}
+
+.hero__left {
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__right {
+    background-image: url("./assets/joseph-frank-DymrYZBV5VQ-unsplash.jpg");
+    padding: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+
+}
+
+#register_btn {
+    font-size: 1rem;
+    min-width: 70%;
+    border-radius: 8px;
+    border: none;
+    /* max-width: 5rem; */
+    padding: .8rem 1.8rem .8rem 1.8rem;
+}
+
+.section__two {
+    padding: 3rem;
+}
+
