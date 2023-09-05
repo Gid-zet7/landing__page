@@ -164,7 +164,7 @@ table {
 .hero {
     gap: 2rem;
     display: flex;
-    font-size: calc(.3em + .7vw);
+    font-size: calc(.5em + .7vw);
 }
 
 .hero > * {
@@ -206,6 +206,10 @@ table {
     padding: 3rem;
 }
 
+.section__two__header {
+    font-size: 1.2rem;
+}
+
 .wrapper__two {
     display: flex;
     flex-direction: column;
@@ -220,7 +224,8 @@ table {
 }
 
 .card {
-    min-width: 100px;
+    max-width: 250px;
+    border-radius: 8px;
 }
 
 img {
@@ -238,5 +243,28 @@ img {
 
 .section__three > div > p + p {
     align-self: flex-end;
+}
+
+.section__four {
+    padding: 3rem;
+    font-size: calc(.5em + .7vw);
+    background-image: var(--gradient);
+}
+
+.action {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text__box {
+    flex: 2;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.action__header {
+    font-size: 1.5rem;
 }
 
