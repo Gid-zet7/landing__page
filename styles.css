@@ -139,12 +139,9 @@ table {
 }
 
 .section__one {
-    padding: 2.5rem;
+    padding: 1.2rem;
     background-image: var(--gradient);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     
 }
 
@@ -335,6 +332,14 @@ img {
 /* ---------MEDIA QUERIES---------- */
 
 @media screen and (min-width: 700px) {
+
+    .section__one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+    }
 
     #logo {
         flex: 3;
