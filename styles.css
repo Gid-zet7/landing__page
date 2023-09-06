@@ -169,6 +169,7 @@ table {
 #logo {
     flex: 2;
     font-size: 1.2rem;
+    font-family: 'Dancing Script', cursive;
 }
 
 #home {
@@ -196,6 +197,7 @@ table {
 
 .hero__header {
     font-size: 1.8rem;
+    font-family: 'Hind', sans-serif;
 }
 
 .hero__left {
@@ -221,7 +223,7 @@ table {
 
 #register_btn {
     font-size: 1rem;
-    min-width: 70%;
+    min-width: 100px;
     border-radius: 8px;
     border: none;
     font-size: 90%;
@@ -236,7 +238,8 @@ table {
 }
 
 .section__two__header {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-family: 'Hind', sans-serif;
 }
 
 .wrapper__two {
@@ -264,7 +267,9 @@ img {
 }
 
 .small {
-    font-size: .5rem;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    min-width: 130px;
 }
 
 /* -------SECTION THREE----------- */
@@ -292,6 +297,9 @@ img {
 
 #big_text {
     font-size: 1.2rem;
+    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Thasadith', sans-serif;
+    line-height: 1.2em;
 }
 
 .section__three > div > p + p {
@@ -310,10 +318,10 @@ img {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .text__box {
-    flex: 2;
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -321,6 +329,7 @@ img {
 
 .action__header {
     font-size: 1.5rem;
+    font-family: 'Hind', sans-serif;
 }
 
 /* ---------MEDIA QUERIES---------- */
@@ -328,6 +337,7 @@ img {
 @media screen and (min-width: 700px) {
 
     #logo {
+        flex: 3;
         font-size: 2rem;
     }
 
@@ -355,6 +365,21 @@ img {
 
     #big_text {
         font-size: 1.33rem;
+    }
+
+    .section__four {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .action {
+        flex-direction: row;
+    }
+
+    #register_btn {
+        max-width: 150px;
     }
 }
 
