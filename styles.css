@@ -154,10 +154,6 @@ table {
     flex-direction: column;
 }
 
-#big_text {
-    font-size: 1.3rem;
-}
-
 .nav {
     padding: 2rem;
 }
@@ -271,23 +267,38 @@ img {
     font-size: .5rem;
 }
 
+/* -------SECTION THREE----------- */
+
 .section__three {
-    padding: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: aliceblue;
 }
 
 .section__wrapper.quote__wrapper {
-    display: flex;
     height: 25vh;
+    display: flex;
+    padding: 2em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 3rem 0 3rem;
+    /* background-color: #faaca8; */
+    max-width: 600px;
+    /* margin: 0 2rem 0 2rem; */
+}
+
+#big_text {
+    font-size: 1.2rem;
 }
 
 .section__three > div > p + p {
     align-self: flex-end;
 }
+
+/* -------SECTION FOUR--------- */
 
 .section__four {
     padding: 3rem;
@@ -312,6 +323,8 @@ img {
     font-size: 1.5rem;
 }
 
+/* ---------MEDIA QUERIES---------- */
+
 @media screen and (min-width: 700px) {
 
     #logo {
@@ -321,6 +334,7 @@ img {
     .section__two {
         padding: 5rem;
     }
+
     .excerpts {
         display: flex;
         flex-direction: row;
@@ -335,9 +349,8 @@ img {
         width: 60%;
     }
 
-    .section__three .section__wrapper {
-        padding-left: 3;
-        padding-right: 3rem;
+    #big_text {
+        font-size: 1.33rem;
     }
 }
 
@@ -345,11 +358,6 @@ img {
 
     .hero__right {
         height: 30vh;
-    }
-
-    .section__three .section__wrapper {
-        padding-left: 10rem;
-        padding-right: 10rem;
     }
 
     #big_text {
