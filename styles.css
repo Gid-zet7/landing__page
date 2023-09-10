@@ -250,6 +250,7 @@ table {
     gap: 2rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .card {
@@ -261,10 +262,6 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 8px;
-}
-
-.excerpts {
-    position: relative;
 }
 
 .bella::after {

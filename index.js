@@ -2,7 +2,6 @@ const excerptCards = document.querySelectorAll(".card");
 const cards = [...excerptCards];
 
 function addClass(e) {
-  console.log(this);
   e.stopPropagation();
   this.setAttribute("id", "active");
 }
