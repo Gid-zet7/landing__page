@@ -152,7 +152,7 @@ table {
 }
 
 .nav {
-    padding: 2rem;
+    padding: 1.2rem;
 }
 
 .nav > ul {
@@ -164,7 +164,7 @@ table {
 }
 
 #logo {
-    flex: 2;
+    flex: 3;
     font-size: 1.2rem;
     font-family: 'Dancing Script', cursive;
 }
@@ -431,6 +431,14 @@ img {
 
     .card {
         flex-direction: column;
+    }
+
+    img {
+        transition: transform .1s ease-in;
+    }
+
+    img:hover {
+        transform: scale(1.1);
     }
 
     .bella::after {
