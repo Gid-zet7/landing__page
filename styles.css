@@ -15,12 +15,12 @@ span,
 applet,
 object,
 iframe,
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6, */
 p,
 blockquote,
 pre,
@@ -155,11 +155,11 @@ table {
     padding: 1.2rem;
 }
 
-.nav>ul {
+.nav > ul {
     display: flex;
 }
 
-.nav>ul>li {
+.nav > ul > li {
     flex: 1;
 }
 
@@ -188,7 +188,7 @@ table {
     height: 35vh;
 } */
 
-.hero>* {
+.hero > * {
     flex: 1;
 }
 
@@ -203,7 +203,7 @@ table {
     flex-direction: column;
 }
 
-.hero__left>p {
+.hero__left > p {
     color: #8a8484e7;
 }
 
@@ -249,8 +249,11 @@ table {
 .excerpts {
     gap: 2rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -285,7 +288,49 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 20rem 0 0;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15rem 0 0;
+    transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: rgb(239, 235, 242);
+    background: linear-gradient(
+        180deg, 
+        rgba(239, 235, 242, 0) 0%, 
+        rgba(174, 174, 181, 0) 0%, 
+        rgba(18, 19, 19, 1) 100%
+    );
+}
+
+.title {
+    position: relative;
+    width: max-content;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform-origin: left;
+    background-color: #faaca8;
+    transition: transform 500ms ease;
+}
+
+.card:hover .title::after,
+.card:focus-within .title::after {
+    transform: scaleX(1);
 }
 
 .bella::after {
@@ -294,12 +339,13 @@ img {
     display: block;
     width: max-content;
     border-radius: 5px;
-    border: 1px dashed black;
+    border: 1px solid black;
     padding: .5rem;
     height: 10px;
     top: .5rem;
     left: .2rem;
     font-size: .7rem;
+    color: #333;
     background-color: #fff;
 }
 
@@ -309,12 +355,13 @@ img {
     display: block;
     width: max-content;
     border-radius: 5px;
-    border: 1px dashed black;
+    border: 1px solid black;
     padding: .5rem;
     height: 10px;
     top: .5rem;
     left: .2rem;
     font-size: .7rem;
+    color: #333;
     background-color: #fff;
 }
 
@@ -324,12 +371,13 @@ img {
     display: block;
     width: max-content;
     border-radius: 5px;
-    border: 1px dashed black;
+    border: 1px solid black;
     padding: .5rem;
     height: 10px;
     top: .5rem;
     left: .2rem;
     font-size: .7rem;
+    color: #333;
     background-color: #fff;
 }
 
@@ -339,19 +387,20 @@ img {
     display: block;
     width: max-content;
     border-radius: 5px;
-    border: 1px dashed black;
+    border: 1px solid black;
     padding: .5rem;
     height: 10px;
     top: .5rem;
     left: .2rem;
     font-size: .7rem;
+    color: #333;
     background-color: #fff;
 }
 
 .small {
-    font-size: .7rem;
-    letter-spacing: 1px;
-    min-width: 130px;
+    font-size: .85rem;
+    line-height: 1.6;
+
 }
 
 /* -------SECTION THREE----------- */
@@ -444,11 +493,11 @@ img {
         padding: 5rem;
     }
 
-    .excerpts {
+    /* .excerpts {
         display: flex;
         flex-direction: row;
-        /* flex-wrap: wrap; */
-    }
+        flex-wrap: wrap;
+    } */
 
     .card {
         flex-direction: column;
@@ -533,4 +582,41 @@ img {
         max-width: 600px;
     }
 
+}
+
+@media (hover) {
+    .content {
+        transform: translateY(60%);
+        transition: transform 500ms ease;
+    }
+
+    .card:hover .content,
+    .card:focus-within .content {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .card:focus-within .content {
+        transition-duration: 0ms;
+    }
+
+    .content > *:not(.title) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+
+    }
+
+    .card:hover .content >*:not(.title),
+    .card:focus-within .content >*:not(.title) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+
+    .card:focus-within .content >*:not(.title) {
+        transition-delay: 0ms;
+    }
+
+    .title::after {
+        transform: scaleX(0);
+    }
 }
